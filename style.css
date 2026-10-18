@@ -19,6 +19,7 @@ body {
     padding: 16px 20px;
     background-color: #3b2a20;
 }
+
 .logo {
     color: #f5d9b8;
     font-size: 28px;
@@ -46,6 +47,7 @@ body {
     font-size: 30px;
     margin-bottom: 16px;
 }
+
 .hero p {
     font-size: 18px;
     max-width: 600px;
@@ -131,6 +133,89 @@ body {
 .order-card li {
     padding: 4px 0;
 }
+
+.order-form-section {
+    padding: 60px 20px 0;
+    text-align: center;
+}
+
+.order-form-section h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.order-form label {
+    font-weight: bold;
+    color: #6f4e37;
+}
+
+.order-form input[type="text"],
+.order-form input[type="number"],
+.order-form select {
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    background-color: #fdf6ec;
+    border: 1px solid #e0d2c0;
+    border-radius: 8px;
+}
+
+.order-form input:focus,
+.order-form select:focus {
+    outline: 2px solid #d9a066;
+    border-color: #d9a066;
+}
+
+.drink-type {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 12px;
+    border: none;
+}
+
+.drink-type legend {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #6f4e37;
+}
+
+.drink-type label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    color: #3b2a20;
+    cursor: pointer;
+}
+
+.order-form button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #6f4e37;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.order-form button:hover {
+    background-color: #3b2a20;
+}
+
 .footer {
     text-align: center;
     padding: 20px;
