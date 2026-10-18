@@ -96,7 +96,41 @@ body {
     border-bottom: none;
 }
 
+.order-section {
+    padding: 60px 20px;
+    text-align: center;
+}
 
+.order-section h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.order-card {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.order-card p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6f4e37;
+    text-transform: capitalize;
+    margin-bottom: 12px;
+}
+
+.order-card ol {
+    padding-left: 20px;
+}
+
+.order-card li {
+    padding: 4px 0;
+}
 .footer {
     text-align: center;
     padding: 20px;
