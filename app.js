@@ -1,16 +1,21 @@
-const userName = prompt("What is your name?");
 
-let gender = "";
 
-while (gender !== "male" && gender !== "female") {
-    gender = prompt("What is your gender? (male or female)");
+function askGender() {
+    let gender = "";
 
-    if (gender !== null) {
-        gender = gender.trim().toLowerCase();
+    while (gender !== "male" && gender !== "female") {
+        gender = prompt("What is your gender? (male or female)");
+
+        if (gender !== null) {
+            gender = gender.trim().toLowerCase();
+        }
     }
+    return gender;
 }
 
 
+const userName = prompt("What is your name?");
+const gender = askGender();
 
 if (gender === "male") {
     alert(`Welcome Mr ${userName} to Caffe Z!`);
