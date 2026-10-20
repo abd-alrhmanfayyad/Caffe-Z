@@ -1,47 +1,6 @@
-
-
-function askGender() {
-    let gender = "";
-
-    while (gender !== "male" && gender !== "female") {
-        gender = prompt("What is your gender? (male or female)");
-
-        if (gender !== null) {
-            gender = gender.trim().toLowerCase();
-        }
-    }
-    return gender;
-}
-
-
-const userName = prompt("What is your name?");
-const gender = askGender();
-const age = Number(prompt("What is your age?"));
-if (gender === "male") {
-    alert(`Welcome Mr ${userName} to Caffe Z!`);
-} else {
-    alert(`Welcome Ms ${userName} to Caffe Z!`);
-}
-
-const drinkType = prompt("Would you like a hot or cold drink?");
-const drinkName = prompt("What is the name of the drink you want?");
-
-const fullorder = [userName, gender, age, drinkType, drinkName];
-
-
-for (let i = 0; i < fullorder.length; i++) {
-    console.log(fullorder[i]);
-}
-
-alert(`Your ${drinkName} is being prepared...`);
-
-console.log(`${userName} ordered a ${drinkType} ${drinkName}`);
-
-
-
 function showOrder(userName, gender, age, drinkType, drinkName) {
-
     const orderDiv = document.getElementById("order");
+    orderDiv.innerHTML = "";
 
     const card = document.createElement("div");
     card.classList.add("order-card");
@@ -60,7 +19,20 @@ function showOrder(userName, gender, age, drinkType, drinkName) {
 
     card.append(nameParagraph, list);
     orderDiv.append(card);
-
-  
 }
-  showOrder(userName, gender, age, drinkType, drinkName);
+
+const form = document.getElementById("order-form");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const userName = document.getElementById("username").value.trim();
+    const age = document.getElementById("age").value;
+    const gender = document.getElementById("gender").value;
+    const drinkName = document.getElementById("drink-name").value.trim();
+    const drinkType = document.querySelector('input[name="drinkType"]:checked').value;
+
+    showOrder(userName, gender, age, drinkType, drinkName);
+
+    form.reset();
+});
